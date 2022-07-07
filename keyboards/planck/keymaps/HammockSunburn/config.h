@@ -17,12 +17,17 @@
 #pragma once
 
 #ifdef AUDIO_ENABLE
-#    define STARTUP_SONG SONG(PLANCK_SOUND)
-// #define STARTUP_SONG SONG(NO_SOUND)
+#    define MY_SONG E__NOTE(_E6), E__NOTE(_FS6), E__NOTE(_CS6), E__NOTE(_E6), E__NOTE(_B5), E__NOTE(_CS6)
+#    define STARTUP_SONG SONG(MY_SONG)
 
 #    define DEFAULT_LAYER_SONGS \
-        { SONG(QWERTY_SOUND), SONG(COLEMAK_SOUND), SONG(DVORAK_SOUND) }
+        { SONG(QWERTY_SOUND), SONG(COLEMAK_SOUND) }
+
+// Without this, the startup song would not play.
+#    define AUDIO_INIT_DELAY
 #endif
+
+#define COMBO_COUNT 2
 
 /*
  * MIDI options
