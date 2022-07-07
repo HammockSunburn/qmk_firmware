@@ -28,6 +28,7 @@
 #endif
 
 #define COMBO_COUNT 2
+#define IGNORE_MOD_TAP_INTERRUPT
 
 /*
  * MIDI options
